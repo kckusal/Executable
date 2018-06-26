@@ -4,8 +4,8 @@
 ## How to Install?
 This is a web-based app hosted in a server and available to the users through internet. There's no specific installation needed to use it. But it is suggested to see the sections below for general instructions to different users:
 
-** For End Users **
-End user need a modern web-browser that supports ECMAScript 5+ (JavaScript). Go to the browser and go to the url of the app: [www.executable.com](www.executable.com) and access the app instantly.
+**For End Users**
+End user need a modern web-browser that supports ECMAScript 5+ (JavaScript). Go to the browser and go to the url of the app: [www.executable.com](https://www.executable.com) and access the app instantly.
 
-** For Developers **
-In addition to ECMAScript 5+ supported browser, developers might want to use an IDE for web development, such as PHPStorm, to access the source files and use them for development purposes. Since this app depends on the popular JS library [gojs.net](gojs.net/latest/index.html), you need to download this library in addition to the source files of this project.
+**For Developers**
+In addition to ECMAScript 5+ supported browser, developers might want to use an IDE for web development, such as PHPStorm, to access the source files and use them for development purposes. Since this app depends on the popular JS library [https://gojs.net](gojs.net/latest/index.html), you need to download this library in addition to the source files of this project.
