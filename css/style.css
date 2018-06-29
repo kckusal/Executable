@@ -1,0 +1,41 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+body {
+  background-color: white;
+  font-family: 'Calibri', sans-serif!important;
+  padding: 0;
+  font-size: 16px!important;
+  margin: 0;
+  color: #444;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+}
+
+#app-title > p {
+  margin-top: -13px;
+}
+
+#myDiagramDiv {
+  z-index: 999!important;
+  background: #f5f5f5;
+}
+
+.dropdown-content {
+  z-index: 9999!important;
+}
+
+button, .button, .bar {
+  background: #666!important;
+  color: #fff!important;
+}
+
+.button:disabled {
+  background: darkgrey!important;
+  color: #fff!important;
+  opacity: 1!important;
+}

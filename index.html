@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Executable | Create components that can be executed.</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/w3-custom.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  </head>
+  <body onload="init()" class="container">
+
+    <div class="cell-row">
+      <div class="cell" id="app-title">
+        <h2>Executable</h2>
+        <p style="font-size: 0.95rem;">Drag around, connect together, and execute a set of self-executable components.</p>
+      </div>
+      <div class="cell right">
+        Contact:- <strong>Kusal KC</strong> | <a href="mailto:k.kc@innopolis.ru">k.kc@innopolis.ru</a>
+      </div>
+    </div>
+
+    <div class="bar">
+      <button onclick="addComponent({'custom': true})" class="bar-item button" title="Adds new component in the workspace.">Add Your Component</button>
+      <div class="dropdown-hover button no-padding">
+        <button class="button cell-row">Add StdLib Components <i class="fas fa-sort-down large cell cell-top"></i></button>
+        <div class="dropdown-content white bar-block card-4">
+          <span class="bar-item bold"> For Arithmetic Operations:</span>
+          <button onclick="addComponent({'custom': false, 'component': 'add'})" class="bar-item button" title="Adds ADD Component from the Standard Library.">Add</button>
+          <button onclick="addComponent({'custom': false, 'component': 'sub'})" class="bar-item button">Sub</button>
+          <button onclick="addComponent({'custom': false, 'component': 'mult'})" class="bar-item button">Mult</button>
+          <button onclick="addComponent({'custom': false, 'component': 'div'})" class="bar-item button">Div</button>
+          <span class="bar-item bold"> For String Manipulation:</span>
+          <button onclick="addComponent({'custom': false, 'component': 'concatenate'})" class="bar-item button">Concatenate</button>
+          <button onclick="addComponent({'custom': false, 'component': 'replace'})" class="bar-item button">Replace</button>
+          <button onclick="addComponent({'custom': false, 'component': 'isSubstring'})" class="bar-item button">isSubstring</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cell-row padding-small">
+      <span class="cell bold xlarge cell-middle underline">Workspace</span>
+      <div class="cell right" style="">
+        <button onclick="executeAll()" class="button padding-small">Execute</button>
+        <button id="saveButton" onclick="save()" class="button padding-small "><i class="fas fa-save small"></i> Save</button>
+        <button id="loadButton" onclick="load()" class="button padding-small"><i class="fas fa-undo-alt small"></i> Reload</button>
+      </div>
+    </div>
+
+    <div class="cell-row">
+      <div id="myDiagramDiv" class="cell border mobile" style="height:400px; width:80%; border-right: none!important; margin-top: 0!important;">
+      </div>
+      <div class="cell padding-small border mobile">
+        <h4 class="no-margin bold center">Properties</h4>
+        <p>Select something—a component or an input/output node—in the diagram alongside to be able to edit their properties here.</p>
+        <div>
+          <p>
+            <label class="bold">Key &nbsp;&nbsp;:</label>&nbsp; 
+            <input class="no-border white" id="selected-key" type="text" name="selected-key" disabled>
+          </p>
+          <p>
+            <label class="bold">Name</label>
+            <input id="selected-name" class="padding-small" type="text" name="name" placeholder="" disabled><br/>
+          </p>
+          <p>
+            <label class="bold">Value</label>
+            <input id="selected-value" class="padding-small" type="text" disabled><br/>
+          </p>
+          <p class="center"><button id="btnUpdateProperties" class="button padding-small hover-green" onclick="updateProperties()" disabled>Update</button></p>
+          <p class="small"><strong>Note</strong> that the diagram data is saved and reloaded automatically upon updating the selected properties above.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      <h3>Connections</h3>
+      <span>The following mapping represents the connections among the components according to their <strong>key</strong>. Note that you can see the <i>key</i> for each element by selecting them and looking up in Properties panel.</span>
+      <div id="connection-map" style="min-height: 200px; max-height: 200px; overflow: auto; outline: 1px solid black; white-space: pre;"></div>
+    </p>
+
+    <p>
+      Each of the input/output nodes will have a value associated with them. Each of the component will have a function associated with them which is stored as a web service across
+      some servers. Once we determine which inputs are available for execution, topological sort will determine the order of execution.
+    </p>
+    <p>The structure will be saved as a JSON file.</p>
+    
+    The transformed model data (not the actual myDiagram.model):
+    <textarea id="mySavedModel" class="hid" style="width:100%;height:300px;white-space: pre;">
+    </textarea>
+
+    <script>
+      var savedModel = document.getElementById("mySavedModel");
+
+      //localStorage.setItem("AppModel", document.getElementById("mySavedModel").value);
+
+      // the first thing to do is to load data from saved file.
+
+      // write data on save() to the local file.
+    </script>
+
+    <script src="js/go.js"></script>
+    <script src="js/draggablePortsGo.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
