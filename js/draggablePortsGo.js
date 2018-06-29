@@ -8,7 +8,7 @@ function init() {
     "linkDataArray": []
   };
 
-  if (localStorage.getItem("AppModel") === null) {
+  if (localStorage.getItem("AppModel") == null) {
     localStorage.setItem("AppModel", JSON.stringify(setInitComponent));
   }
   
