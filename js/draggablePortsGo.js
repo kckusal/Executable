@@ -1,4 +1,17 @@
 function init() {
+  let setInitComponent = {
+    "class": "go.GraphLinksModel",
+    "linkFromPortIdProperty": "fromPort",
+    "linkToPortIdProperty": "toPort",
+    "nodeDataArray": [
+    {"key":1, "name":"Example", "ins":[ {"name":"s1", "key":-3},{"name":"s2", "key":-4} ], "outs":[ {"name":"o1", "key":-5} ], "loc":"-80 -80"}],
+    "linkDataArray": []
+  };
+
+  if (localStorage.getItem("AppModel") === "") {
+    localStorage.setItem("AppModel", JSON.stringify(setInitComponent));
+  }
+  
   //if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
   var $ = go.GraphObject.make;
 
