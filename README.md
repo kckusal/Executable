@@ -9,3 +9,5 @@ End user need a modern web-browser that supports ECMAScript 5+ (JavaScript). Go 
 
 #### For Developers
 In addition to ECMAScript 5+ supported browser, developers might want to use an IDE for web development, such as PHPStorm, to access the source files and use them for development purposes. Since this app depends on the popular JS library [gojs.net](https://gojs.net/latest/index.html), you need to download this library in addition to the source files of this project.
+
+**Contact**: Kindly contact the developer, Kusal KC here or through his personal website, [www.kusalkc.com.np](www.kusalkc.com.np) for more information relevant to this project.
